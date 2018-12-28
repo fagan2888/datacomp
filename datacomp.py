@@ -147,7 +147,7 @@ sess.run(tf.global_variables_initializer())
 recall=0
 precision=0
 num_epochs=0
-while (recall<0.95) and (precision<0.95):
+while !((recall>0.75) or (precision>0.75)):
     train_batch = next_batch(NUM_EPOCHS)
     train_batch_x= train_batch[0]
     train_batch_y = train_batch[1]
